@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8d769ddd24.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">To Do List</h1>
+            <p class="input-instructions">Enter text into the input field to add items to your list and click enter or
+                input button</p>
+            <p class="delete-instructions">
+                Click the "X" to remove the item from your list.
+            </p>
+        </header>
+
+        <section class="list-input">
+            <div class="input-field">
+                <input type="text" id="input" placeholder="New item..." maxlength="27">
+            </div>
+            <button id="enter">
+                <i class="fas fa-arrow-circle-right"></i> </button>
+        </section>
+        <section class="new-items">
+            <ul class="all-tasks">
+
+            </ul>
+
+        </section>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

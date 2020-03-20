@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #1971C2;
+  text-align: center;
+
+}
+
+.container {
+  height: 100vh;
+}
+
+header {
+  margin-top: 5%;
+}
+
+.title {
+  margin: 10px 0px 20px 0px;
+  color: white;
+  font-size: xx-large;
+  font-weight: 1000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.input-instructions {
+  margin-bottom: 5px;
+  color: #f5fcc1;
+  font-size: x-large;
+
+}
+
+.delete-instructions {
+  margin-bottom: 25px;
+
+  color: #f3d1f4;
+  font-size: x-large;
+}
+
+.list-input {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+input[type=text] {
+  padding: 6px 20% 6px 6px;
+  margin-right: 15px;
+  border-radius: 4px;
+  text-decoration: gray;
+  font-size: large;
+  font-weight: bold;
+}
+
+#enter {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: #04A1BF;
+  background-color: #084177;
+
+
+}
+
+#enter:hover {
+  background-color: #04A1BF;
+  color: #084177;
+}
+
+ul {
+  text-align: left;
+  margin-top: 20px;
+}
+
+
+li {
+  list-style: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 600;
+  border: 2px solid #025f70;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #4EB9CD;
+}
+
+.done {
+  background: #51DF70 !important;
+  color: #00891E;
+}
+
+.delete {
+  display: none;
+}
