@@ -1,54 +1,64 @@
 const insertButton = document.getElementById("enter");
 console.log("insertButton", insertButton)
 const inputText = document.getElementById("input");
+console.log("inputText", inputText)
 const ul = document.querySelector("ul");
+console.log("ul", ul)
 const item = document.getElementsByTagName("il");
+console.log("item", item)
 
 // check the length of an input text
 inputLength = () => inputText.value.length;
-console.log(inputLength);
+console.log("inputLength", inputLength())
 // check the list length
 listLength = () => item.length;
+console.log("listLength", listLength())
 
 // create tasks function
 createListElement = () => {
+  console.log("create element");
   let li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
-  lu.appendChild(li);
+  ul.appendChild(li);
   input.value = "";
-}
 
-// in case of the task had been done
+  // create the deleting button 
+  let dBtn = document.createElement("button");
+  dBtn.classList.add("delete-btn");
+  dBtn.appendChild(document.createTextNode("X"));
+  li.appendChild(dBtn);
 
-TaskDone = () => {
-  li.classList.toggle("done");
-}
+  //add the event listener to it
+  deleteListItem = () => {
+    li.classList.add("delete");
+  }
+  // in case of the task had been done
 
-li.addEventListener("click", TaskDone);
+  taskDone = () => {
+    li.classList.toggle("done");
+    dBtn.classList.toggle("hideCross");
+  }
 
-//in case of deleting the task
-// create the deleting button 
-let dBtn = document.createElement("button");
-dBtn.appendChild(document.createTextNode("X"));
-li.appendChild(dBtn);
+  li.addEventListener("click", taskDone);
 
-//add the event listener to it
-dBtn.addEventListener("click", deleteListItem);
-deleteListItem = () => {
-  li.classList.add("delete")
+  //in case of deleting the task
+
+
+  dBtn.addEventListener("click", deleteListItem);
+
 }
 
 // add items events 
 
 addListAfterBtn = () => {
   if (inputLength() > 0) {
-    createElement();
+    createListElement();
   }
 }
 
 addListAfterEnterKey = (event) => {
   if (inputLength() > 0 && event.which === 13) {
-    createElement();
+    createListElement();
   }
 
 }

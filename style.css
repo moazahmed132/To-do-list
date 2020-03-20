@@ -37,7 +37,6 @@ header {
 
 .delete-instructions {
   margin-bottom: 25px;
-
   color: #f3d1f4;
   font-size: x-large;
 }
@@ -74,12 +73,16 @@ input[type=text] {
 }
 
 ul {
-  text-align: left;
-  margin-top: 20px;
+
+  margin: auto;
+  width: 60%;
 }
 
 
 li {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   padding: 10px 20px;
   color: #ffffff;
@@ -91,9 +94,22 @@ li {
   background: #4EB9CD;
 }
 
+.delete-btn {
+  text-align: right;
+  background-color: #4EB9CD;
+  border: none;
+  font-size: x-large;
+  color: rgb(141, 112, 112);
+  font-weight: bold;
+}
+
+.hideCross {
+  display: none;
+}
+
 .done {
-  background: #51DF70 !important;
-  color: #00891E;
+  text-decoration: line-through;
+
 }
 
 .delete {
