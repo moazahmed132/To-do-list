@@ -15,7 +15,6 @@ inputLength = () => inputText.value.length;
 listLength = () => item.length;
 
 // create tasks function
-let dBtns = [];
 
 createListElement = (text) => {
   let li = document.createElement("li");
@@ -25,7 +24,6 @@ createListElement = (text) => {
 
   // create the deleting button 
   let dBtn = document.createElement("button");
-  dBtns.push(dBtn);
 
   dBtn.classList.add("delete-btn");
   dBtn.classList.add("fa", "fa-trash", "fa-6");
