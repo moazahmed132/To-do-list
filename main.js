@@ -20,37 +20,33 @@ createListElement = (text) => {
   let li = document.createElement("li");
   li.textContent = text
   ul.appendChild(li);
-
-
   // create the deleting button 
   let dBtn = document.createElement("button");
-
   dBtn.classList.add("delete-btn");
   dBtn.classList.add("fa", "fa-trash", "fa-6");
   li.appendChild(dBtn);
 
   //add the event listener to it
   deleteListItem = () => {
-
     const index = itemsArray.indexOf(li.textContent);
     itemsArray.splice(index, 1);
     localStorage.setItem('items', JSON.stringify(itemsArray))
-    li.classList.add("delete");
+    li.remove()
+
   }
 
   // in case of the task had been done
   taskDone = () => {
     li.classList.toggle("done");
-    dBtn.classList.toggle("hideCross");
   }
 
   li.addEventListener("click", taskDone);
 
   //in case of deleting the task
   dBtn.addEventListener("click", deleteListItem);
-}
-// add items events 
 
+  // add items events 
+}
 addListAfterBtn = () => {
   if (inputLength() > 0 && inputText.value.trim()) {
     itemsArray.push(input.value)
@@ -77,5 +73,3 @@ data.forEach(item => {
 insertButton.addEventListener("click", addListAfterBtn);
 
 input.addEventListener("keypress", addListAfterEnterKey);
-
-
